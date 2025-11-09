@@ -1,0 +1,905 @@
+{
+  "last_update": "2025-11-09 15:18:00",
+  "coins": [
+    {
+      "symbol": "USDT/USDT",
+      "price": 0.99994,
+      "change_1h": 0.0,
+      "volume": 63799398170,
+      "rsi": 64.92,
+      "macd_hist": 4.3e-05,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "BTC/USDT",
+      "price": 102107,
+      "change_1h": 0.35,
+      "volume": 48240864677,
+      "rsi": 56.57,
+      "macd_hist": 3.14829,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "ETH/USDT",
+      "price": 3419.46,
+      "change_1h": 0.86,
+      "volume": 19302179535,
+      "rsi": 55.54,
+      "macd_hist": 4.906513,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "XAUT/USDT",
+      "price": 3984.02,
+      "change_1h": -0.04,
+      "volume": 17557786862,
+      "rsi": 51.1,
+      "macd_hist": 0.337302,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "USDC/USDT",
+      "price": 0.9998,
+      "change_1h": 0.01,
+      "volume": 4841202733,
+      "rsi": 52.06,
+      "macd_hist": 1e-06,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "SOL/USDT",
+      "price": 158.86,
+      "change_1h": 0.75,
+      "volume": 3419349905,
+      "rsi": 55.08,
+      "macd_hist": 0.276828,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "ZEC/USDT",
+      "price": 613.8,
+      "change_1h": 2.76,
+      "volume": 3395025421,
+      "rsi": 63.48,
+      "macd_hist": 7.632226,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "FDUSD/USDT",
+      "price": 0.997167,
+      "change_1h": 0.07,
+      "volume": 2740638245,
+      "rsi": 46.65,
+      "macd_hist": -0.000175,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "BSC-USD/USDT",
+      "price": 0.999626,
+      "change_1h": -0.08,
+      "volume": 2574598843,
+      "rsi": 50.54,
+      "macd_hist": 8.7e-05,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "XRP/USDT",
+      "price": 2.27,
+      "change_1h": 0.52,
+      "volume": 2425501630,
+      "rsi": 40.76,
+      "macd_hist": -0.001452,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "BNB/USDT",
+      "price": 988.04,
+      "change_1h": 0.35,
+      "volume": 1501473234,
+      "rsi": 51.1,
+      "macd_hist": -0.552334,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "DOGE/USDT",
+      "price": 0.174829,
+      "change_1h": 0.91,
+      "volume": 1472061934,
+      "rsi": 52.81,
+      "macd_hist": -0.000245,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "FIL/USDT",
+      "price": 2.65,
+      "change_1h": 3.57,
+      "volume": 1353399279,
+      "rsi": 38.02,
+      "macd_hist": -0.086139,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "LTC/USDT",
+      "price": 104.57,
+      "change_1h": 2.96,
+      "volume": 1329607498,
+      "rsi": 64.11,
+      "macd_hist": 0.288782,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "ICP/USDT",
+      "price": 7.14,
+      "change_1h": 3.32,
+      "volume": 1305166276,
+      "rsi": 30.14,
+      "macd_hist": -0.3608,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "NEAR/USDT",
+      "price": 2.76,
+      "change_1h": 1.88,
+      "volume": 1095561207,
+      "rsi": 43.69,
+      "macd_hist": -0.043979,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "ADA/USDT",
+      "price": 0.561977,
+      "change_1h": 1.56,
+      "volume": 843557278,
+      "rsi": 45.55,
+      "macd_hist": -0.001786,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "DASH/USDT",
+      "price": 95.44,
+      "change_1h": 8.9,
+      "volume": 675753712,
+      "rsi": 75.94,
+      "macd_hist": 2.272244,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "SUI/USDT",
+      "price": 2.09,
+      "change_1h": 1.04,
+      "volume": 637869464,
+      "rsi": 50.19,
+      "macd_hist": -0.003691,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "0G/USDT",
+      "price": 1.66,
+      "change_1h": 0.81,
+      "volume": 567202368,
+      "rsi": 50.52,
+      "macd_hist": 0.024252,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "LINK/USDT",
+      "price": 15.38,
+      "change_1h": 1.31,
+      "volume": 566593690,
+      "rsi": 54.36,
+      "macd_hist": -0.018979,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "AAVE/USDT",
+      "price": 201.58,
+      "change_1h": 1.32,
+      "volume": 547200156,
+      "rsi": 56.31,
+      "macd_hist": -0.23966,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "SOL/USDT",
+      "price": 158.8,
+      "change_1h": 0.78,
+      "volume": 542742162,
+      "rsi": 54.87,
+      "macd_hist": 0.279031,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "WETH/USDT",
+      "price": 3416.26,
+      "change_1h": 0.74,
+      "volume": 495270859,
+      "rsi": 54.77,
+      "macd_hist": 4.58137,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "DOT/USDT",
+      "price": 3.13,
+      "change_1h": 1.93,
+      "volume": 451051961,
+      "rsi": 44.53,
+      "macd_hist": -0.029185,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "GIGGLE/USDT",
+      "price": 190.12,
+      "change_1h": 9.35,
+      "volume": 440835410,
+      "rsi": 75.33,
+      "macd_hist": 11.396586,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "KOGE/USDT",
+      "price": 47.98,
+      "change_1h": -0.13,
+      "volume": 424712573,
+      "rsi": 49.19,
+      "macd_hist": 0.009257,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "FET/USDT",
+      "price": 0.317084,
+      "change_1h": 8.14,
+      "volume": 404604453,
+      "rsi": 50.75,
+      "macd_hist": -0.010031,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "AVAX/USDT",
+      "price": 17.22,
+      "change_1h": 1.19,
+      "volume": 398189147,
+      "rsi": 55.87,
+      "macd_hist": -0.043072,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "ASTER/USDT",
+      "price": 1.081,
+      "change_1h": -0.21,
+      "volume": 387063075,
+      "rsi": 71.21,
+      "macd_hist": 0.01228,
+      "signal": "DUMP"
+    },
+    {
+      "symbol": "TRX/USDT",
+      "price": 0.289596,
+      "change_1h": 0.09,
+      "volume": 381176678,
+      "rsi": 44.34,
+      "macd_hist": -0.000378,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "WBNB/USDT",
+      "price": 987.75,
+      "change_1h": 0.27,
+      "volume": 373906116,
+      "rsi": 51.52,
+      "macd_hist": -0.616352,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "TRUMP/USDT",
+      "price": 7.44,
+      "change_1h": 0.19,
+      "volume": 350546000,
+      "rsi": 43.98,
+      "macd_hist": -0.015131,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "HYPE/USDT",
+      "price": 39.69,
+      "change_1h": 0.3,
+      "volume": 319579233,
+      "rsi": 43.55,
+      "macd_hist": -0.103864,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "APT/USDT",
+      "price": 3.05,
+      "change_1h": 2.49,
+      "volume": 314862968,
+      "rsi": 51.78,
+      "macd_hist": -0.014516,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "UNI/USDT",
+      "price": 6.36,
+      "change_1h": 6.91,
+      "volume": 306854812,
+      "rsi": 76.62,
+      "macd_hist": 0.025544,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "QUQ/USDT",
+      "price": 0.003599,
+      "change_1h": -0.07,
+      "volume": 304935725,
+      "rsi": 50.44,
+      "macd_hist": 1e-06,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "XMR/USDT",
+      "price": 446.52,
+      "change_1h": 3.86,
+      "volume": 303174305,
+      "rsi": 64.55,
+      "macd_hist": 11.279534,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "PEPE/USDT",
+      "price": 6e-06,
+      "change_1h": 1.01,
+      "volume": 293405923,
+      "rsi": 52.16,
+      "macd_hist": -0.0,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "USD1/USDT",
+      "price": 0.99943,
+      "change_1h": 0.02,
+      "volume": 282035879,
+      "rsi": 52.58,
+      "macd_hist": 3.6e-05,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "MMT/USDT",
+      "price": 0.592291,
+      "change_1h": 1.88,
+      "volume": 267670579,
+      "rsi": 43.54,
+      "macd_hist": -0.007551,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "CBBTC/USDT",
+      "price": 102035,
+      "change_1h": 0.39,
+      "volume": 256779328,
+      "rsi": 56.14,
+      "macd_hist": -7.024017,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "XPL/USDT",
+      "price": 0.279386,
+      "change_1h": 0.86,
+      "volume": 254270181,
+      "rsi": 39.02,
+      "macd_hist": -0.004788,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "PYR/USDT",
+      "price": 1.035,
+      "change_1h": -0.25,
+      "volume": 244737348,
+      "rsi": 47.63,
+      "macd_hist": -0.009667,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "USDC/USDT",
+      "price": 0.99986,
+      "change_1h": -0.01,
+      "volume": 233083855,
+      "rsi": 51.58,
+      "macd_hist": -6e-06,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "WETH/USDT",
+      "price": 3415.6,
+      "change_1h": 0.72,
+      "volume": 227122087,
+      "rsi": 54.47,
+      "macd_hist": 4.422222,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "ZEN/USDT",
+      "price": 16.26,
+      "change_1h": 4.15,
+      "volume": 223068540,
+      "rsi": 76.76,
+      "macd_hist": 0.367777,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "VIRTUAL/USDT",
+      "price": 1.35,
+      "change_1h": 3.16,
+      "volume": 220389949,
+      "rsi": 52.5,
+      "macd_hist": -0.005757,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "WETH/USDT",
+      "price": 3415.95,
+      "change_1h": 0.74,
+      "volume": 210977309,
+      "rsi": 54.49,
+      "macd_hist": 4.259933,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "USDE/USDT",
+      "price": 0.998852,
+      "change_1h": 0.02,
+      "volume": 206244650,
+      "rsi": 51.4,
+      "macd_hist": 7.9e-05,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "SAPIEN/USDT",
+      "price": 0.292086,
+      "change_1h": 3.81,
+      "volume": 195823825,
+      "rsi": 66.41,
+      "macd_hist": 0.017616,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "S/USDT",
+      "price": 0.158514,
+      "change_1h": 3.13,
+      "volume": 190837808,
+      "rsi": 43.36,
+      "macd_hist": -0.002515,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "TAO/USDT",
+      "price": 360.19,
+      "change_1h": 0.75,
+      "volume": 187844522,
+      "rsi": 47.49,
+      "macd_hist": -2.035057,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "ENA/USDT",
+      "price": 0.315679,
+      "change_1h": 0.36,
+      "volume": 186970707,
+      "rsi": 50.52,
+      "macd_hist": -5.6e-05,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "WAVAX/USDT",
+      "price": 17.22,
+      "change_1h": 1.3,
+      "volume": 181441629,
+      "rsi": 56.2,
+      "macd_hist": -0.04363,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "PUMP/USDT",
+      "price": 0.003783,
+      "change_1h": 0.59,
+      "volume": 180806522,
+      "rsi": 46.76,
+      "macd_hist": 3e-06,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "AR/USDT",
+      "price": 5.43,
+      "change_1h": 2.15,
+      "volume": 178335000,
+      "rsi": 40.18,
+      "macd_hist": -0.214823,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "USDT0/USDT",
+      "price": 1.0,
+      "change_1h": 0.03,
+      "volume": 177243938,
+      "rsi": 47.38,
+      "macd_hist": 3.3e-05,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "BCH/USDT",
+      "price": 496.15,
+      "change_1h": 0.86,
+      "volume": 175235536,
+      "rsi": 54.34,
+      "macd_hist": 0.22298,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "ZK/USDT",
+      "price": 0.057351,
+      "change_1h": 1.72,
+      "volume": 174487025,
+      "rsi": 56.55,
+      "macd_hist": 0.000322,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "HBAR/USDT",
+      "price": 0.170878,
+      "change_1h": 1.02,
+      "volume": 174275094,
+      "rsi": 49.89,
+      "macd_hist": -0.000649,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "STRK/USDT",
+      "price": 0.142815,
+      "change_1h": 1.25,
+      "volume": 157294807,
+      "rsi": 67.26,
+      "macd_hist": 0.002614,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "WBTC/USDT",
+      "price": 101791,
+      "change_1h": 0.29,
+      "volume": 154768722,
+      "rsi": 54.7,
+      "macd_hist": -1.295295,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "XLM/USDT",
+      "price": 0.275816,
+      "change_1h": 0.48,
+      "volume": 148855258,
+      "rsi": 42.92,
+      "macd_hist": -0.001316,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "SHIB/USDT",
+      "price": 1e-05,
+      "change_1h": 1.4,
+      "volume": 148396022,
+      "rsi": 57.02,
+      "macd_hist": -0.0,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "SEI/USDT",
+      "price": 0.174981,
+      "change_1h": 1.35,
+      "volume": 146550643,
+      "rsi": 48.11,
+      "macd_hist": -0.001357,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "TIA/USDT",
+      "price": 0.993581,
+      "change_1h": 2.23,
+      "volume": 142980350,
+      "rsi": 45.95,
+      "macd_hist": -0.008132,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "SPK/USDT",
+      "price": 0.038951,
+      "change_1h": 1.49,
+      "volume": 142803739,
+      "rsi": 41.29,
+      "macd_hist": -0.000765,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "KITE/USDT",
+      "price": 0.084225,
+      "change_1h": 5.33,
+      "volume": 141343682,
+      "rsi": 57.89,
+      "macd_hist": 0.001832,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "LAYER/USDT",
+      "price": 0.24949,
+      "change_1h": 1.23,
+      "volume": 137902688,
+      "rsi": 49.13,
+      "macd_hist": -0.001603,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "KSM/USDT",
+      "price": 12.3,
+      "change_1h": 1.17,
+      "volume": 136268384,
+      "rsi": 41.64,
+      "macd_hist": -0.279718,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "ARB/USDT",
+      "price": 0.292659,
+      "change_1h": 1.93,
+      "volume": 135468035,
+      "rsi": 53.9,
+      "macd_hist": -0.000852,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "BONK/USDT",
+      "price": 1.3e-05,
+      "change_1h": 1.64,
+      "volume": 133931310,
+      "rsi": 50.31,
+      "macd_hist": -0.0,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "MNT/USDT",
+      "price": 1.31,
+      "change_1h": 0.86,
+      "volume": 129869589,
+      "rsi": 38.95,
+      "macd_hist": -0.005014,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "ETC/USDT",
+      "price": 16.08,
+      "change_1h": 0.71,
+      "volume": 129108272,
+      "rsi": 50.73,
+      "macd_hist": -0.05593,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "RESOLV/USDT",
+      "price": 0.113114,
+      "change_1h": 1.19,
+      "volume": 128415643,
+      "rsi": 59.41,
+      "macd_hist": 0.004859,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "PENGU/USDT",
+      "price": 0.014471,
+      "change_1h": 1.62,
+      "volume": 126571626,
+      "rsi": 50.95,
+      "macd_hist": -6.3e-05,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "CAKE/USDT",
+      "price": 2.52,
+      "change_1h": 0.85,
+      "volume": 122389832,
+      "rsi": 48.73,
+      "macd_hist": 0.000286,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "WLD/USDT",
+      "price": 0.800074,
+      "change_1h": 1.6,
+      "volume": 121843713,
+      "rsi": 51.98,
+      "macd_hist": -0.0035,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "WIF/USDT",
+      "price": 0.471025,
+      "change_1h": 1.77,
+      "volume": 118510479,
+      "rsi": 55.5,
+      "macd_hist": -0.00069,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "ALICE/USDT",
+      "price": 0.308223,
+      "change_1h": -2.33,
+      "volume": 117934089,
+      "rsi": 50.91,
+      "macd_hist": -0.000416,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "UGOLD/USDT",
+      "price": 4326.29,
+      "change_1h": 0.0,
+      "volume": 112427416,
+      "rsi": 11.26,
+      "macd_hist": -6.2789,
+      "signal": "PUMP"
+    },
+    {
+      "symbol": "ILV/USDT",
+      "price": 10.59,
+      "change_1h": 2.02,
+      "volume": 111587845,
+      "rsi": 47.17,
+      "macd_hist": -0.211121,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "WHYPE/USDT",
+      "price": 39.81,
+      "change_1h": 0.28,
+      "volume": 110620217,
+      "rsi": 43.58,
+      "macd_hist": -0.115101,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "INJ/USDT",
+      "price": 7.23,
+      "change_1h": 1.09,
+      "volume": 107843390,
+      "rsi": 47.77,
+      "macd_hist": -0.051731,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "ORDI/USDT",
+      "price": 5.11,
+      "change_1h": 0.91,
+      "volume": 103485175,
+      "rsi": 47.0,
+      "macd_hist": -0.050699,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "HIGH/USDT",
+      "price": 0.313808,
+      "change_1h": 0.65,
+      "volume": 99419488,
+      "rsi": 43.62,
+      "macd_hist": -0.00509,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "TON/USDT",
+      "price": 2.07,
+      "change_1h": 1.08,
+      "volume": 99330589,
+      "rsi": 53.13,
+      "macd_hist": -0.003681,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "RENDER/USDT",
+      "price": 2.24,
+      "change_1h": 1.71,
+      "volume": 97512664,
+      "rsi": 40.81,
+      "macd_hist": -0.024262,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "FLUX/USDT",
+      "price": 0.196334,
+      "change_1h": 5.25,
+      "volume": 95774143,
+      "rsi": 33.34,
+      "macd_hist": -0.01227,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "MAGIC/USDT",
+      "price": 0.129626,
+      "change_1h": 2.32,
+      "volume": 93913407,
+      "rsi": 42.58,
+      "macd_hist": -0.002337,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "UBTC/USDT",
+      "price": 102077,
+      "change_1h": 0.39,
+      "volume": 92448698,
+      "rsi": 54.91,
+      "macd_hist": -7.790982,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "ATOM/USDT",
+      "price": 2.92,
+      "change_1h": 2.27,
+      "volume": 92426942,
+      "rsi": 50,
+      "macd_hist": 0,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "OP/USDT",
+      "price": 0.415499,
+      "change_1h": 1.89,
+      "volume": 91295470,
+      "rsi": 54.63,
+      "macd_hist": -0.00158,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "PIGGY/USDT",
+      "price": 1.12,
+      "change_1h": 0.05,
+      "volume": 91130953,
+      "rsi": 50,
+      "macd_hist": 0,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "AVL/USDT",
+      "price": 0.168562,
+      "change_1h": 2.35,
+      "volume": 90091826,
+      "rsi": 68.55,
+      "macd_hist": 0.00216,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "RLUSD/USDT",
+      "price": 1.0,
+      "change_1h": 0.03,
+      "volume": 88072867,
+      "rsi": 51.76,
+      "macd_hist": 1e-05,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "GALA/USDT",
+      "price": 0.009911,
+      "change_1h": 1.67,
+      "volume": 88069984,
+      "rsi": 50.61,
+      "macd_hist": -5.7e-05,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "KAVA/USDT",
+      "price": 0.170153,
+      "change_1h": 2.57,
+      "volume": 88058851,
+      "rsi": 61.68,
+      "macd_hist": 0.007829,
+      "signal": "NEUTRAL"
+    },
+    {
+      "symbol": "CDL/USDT",
+      "price": 0.060586,
+      "change_1h": 0.28,
+      "volume": 84266655,
+      "rsi": 41.43,
+      "macd_hist": 2.2e-05,
+      "signal": "NEUTRAL"
+    }
+  ]
+}

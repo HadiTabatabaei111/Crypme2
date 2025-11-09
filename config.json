@@ -1,0 +1,12 @@
+{
+  "scan_interval": 60,
+  "rsi_overbought": 70,
+  "rsi_oversold": 30,
+  "min_volume_usd": 5000000,
+  "price_change_1h_min": 5.0,
+  "auto_trade": false,
+  "trade_symbol_suffix": "USDT",
+  "position_usd": 50,
+  "bitunix_api_key": "224699edd4d9728ffdcdfa4dfcaa151d",
+  "bitunix_api_secret": "e93f66446bc8d5aacfe8bb2ea2287881"
+}
