@@ -1,0 +1,177 @@
+2025-11-08 14:49:14,243 - crypto_futures_bot - INFO - Database initialized successfully
+2025-11-18 08:51:51,704 - crypto_futures_bot - INFO - Database initialized successfully
+2025-11-18 08:52:43,194 - __main__ - INFO - Database initialized successfully
+2025-11-18 08:52:43,225 - __main__ - INFO - ByBit client initialized successfully
+2025-11-18 08:52:43,226 - __main__ - INFO - Trading bot started
+2025-11-18 08:52:43,228 - __main__ - INFO - Scanning for new tokens and analyzing market...
+2025-11-18 08:52:47,626 - __main__ - INFO - Found 174 unique pairs from DexScreener
+2025-11-18 08:52:47,627 - __main__ - INFO - Analyzing 100 pairs from DexScreener...
+2025-11-18 08:52:50,491 - __main__ - ERROR - Error checking token on RugCheck: 404 Client Error: Not Found for url: https://api.rugcheck.xyz/v1/tokens/ethereum/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48
+2025-11-18 08:52:50,806 - __main__ - INFO - Added 0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48 to blacklist: RugCheck: UNKNOWN
+2025-11-18 08:52:51,136 - __main__ - ERROR - Error checking token on RugCheck: 404 Client Error: Not Found for url: https://api.rugcheck.xyz/v1/tokens/ethereum/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2
+2025-11-18 08:52:51,225 - __main__ - INFO - Added 0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2 to blacklist: RugCheck: UNKNOWN
+2025-11-18 08:52:51,463 - __main__ - ERROR - Error checking token on RugCheck: 404 Client Error: Not Found for url: https://api.rugcheck.xyz/v1/tokens/ethereum/0xb88339CB7199b77E23DB6E890353E22632Ba630f
+2025-11-18 08:52:51,581 - __main__ - INFO - Added 0xb88339CB7199b77E23DB6E890353E22632Ba630f to blacklist: RugCheck: UNKNOWN
+2025-11-18 08:52:51,842 - __main__ - ERROR - Error checking token on RugCheck: 404 Client Error: Not Found for url: https://api.rugcheck.xyz/v1/tokens/ethereum/7vfCXTUXx5WJV5JADk17DUJ4ksgau7utNKj4b963voxs
+2025-11-18 08:52:51,972 - __main__ - INFO - Added 7vfCXTUXx5WJV5JADk17DUJ4ksgau7utNKj4b963voxs to blacklist: RugCheck: UNKNOWN
+2025-11-18 08:52:52,246 - __main__ - ERROR - Error checking token on RugCheck: 404 Client Error: Not Found for url: https://api.rugcheck.xyz/v1/tokens/ethereum/0x9895D81bB462A195b4922ED7De0e3ACD007c32CB
+2025-11-18 08:52:52,414 - __main__ - INFO - Added 0x9895D81bB462A195b4922ED7De0e3ACD007c32CB to blacklist: RugCheck: UNKNOWN
+2025-11-18 08:52:52,798 - __main__ - ERROR - Error checking token on RugCheck: 404 Client Error: Not Found for url: https://api.rugcheck.xyz/v1/tokens/ethereum/0xe5D7C2a44FfDDf6b295A15c148167daaAf5Cf34f
+2025-11-18 08:52:52,925 - __main__ - INFO - Added 0xe5D7C2a44FfDDf6b295A15c148167daaAf5Cf34f to blacklist: RugCheck: UNKNOWN
+2025-11-18 08:52:53,145 - __main__ - ERROR - Error checking token on RugCheck: 404 Client Error: Not Found for url: https://api.rugcheck.xyz/v1/tokens/ethereum/0xe15fC38F6D8c56aF07bbCBe3BAf5708A2Bf42392
+2025-11-18 08:52:53,661 - __main__ - INFO - Added 0xe15fC38F6D8c56aF07bbCBe3BAf5708A2Bf42392 to blacklist: RugCheck: UNKNOWN
+2025-11-18 08:52:53,900 - __main__ - ERROR - Error checking token on RugCheck: 404 Client Error: Not Found for url: https://api.rugcheck.xyz/v1/tokens/ethereum/0x160345fC359604fC6e70E3c5fAcbdE5F7A9342d8
+2025-11-18 08:52:53,978 - __main__ - INFO - Added 0x160345fC359604fC6e70E3c5fAcbdE5F7A9342d8 to blacklist: RugCheck: UNKNOWN
+2025-11-18 08:52:54,211 - __main__ - ERROR - Error checking token on RugCheck: 404 Client Error: Not Found for url: https://api.rugcheck.xyz/v1/tokens/ethereum/0xfde4C96c8593536E31F229EA8f37b2ADa2699bb2
+2025-11-18 08:52:54,336 - __main__ - INFO - Added 0xfde4C96c8593536E31F229EA8f37b2ADa2699bb2 to blacklist: RugCheck: UNKNOWN
+2025-11-18 08:52:54,567 - __main__ - ERROR - Error checking token on RugCheck: 404 Client Error: Not Found for url: https://api.rugcheck.xyz/v1/tokens/ethereum/0xdEAddEaDdeadDEadDEADDEAddEADDEAddead1111
+2025-11-18 08:52:54,678 - __main__ - INFO - Added 0xdEAddEaDdeadDEadDEADDEAddEADDEAddead1111 to blacklist: RugCheck: UNKNOWN
+2025-11-18 08:52:54,909 - __main__ - ERROR - Error checking token on RugCheck: 404 Client Error: Not Found for url: https://api.rugcheck.xyz/v1/tokens/ethereum/0xD221812de1BD094f35587EE8E174B07B6167D9Af
+2025-11-18 08:52:55,026 - __main__ - INFO - Added 0xD221812de1BD094f35587EE8E174B07B6167D9Af to blacklist: RugCheck: UNKNOWN
+2025-11-18 08:52:55,254 - __main__ - ERROR - Error checking token on RugCheck: 404 Client Error: Not Found for url: https://api.rugcheck.xyz/v1/tokens/ethereum/0x1502FA4be69d526124D453619276FacCab275d3D
+2025-11-18 08:52:55,381 - __main__ - INFO - Added 0x1502FA4be69d526124D453619276FacCab275d3D to blacklist: RugCheck: UNKNOWN
+2025-11-18 08:52:55,663 - __main__ - ERROR - Error checking token on RugCheck: 404 Client Error: Not Found for url: https://api.rugcheck.xyz/v1/tokens/ethereum/0x176211869cA2b568f2A7D4EE941E073a821EE1ff
+2025-11-18 08:52:55,812 - __main__ - INFO - Added 0x176211869cA2b568f2A7D4EE941E073a821EE1ff to blacklist: RugCheck: UNKNOWN
+2025-11-18 08:52:56,146 - __main__ - ERROR - Error checking token on RugCheck: 404 Client Error: Not Found for url: https://api.rugcheck.xyz/v1/tokens/ethereum/0x4200000000000000000000000000000000000006
+2025-11-18 08:52:56,416 - __main__ - INFO - Added 0x4200000000000000000000000000000000000006 to blacklist: RugCheck: UNKNOWN
+2025-11-18 08:52:56,802 - __main__ - ERROR - Error checking token on RugCheck: 404 Client Error: Not Found for url: https://api.rugcheck.xyz/v1/tokens/ethereum/0x5300000000000000000000000000000000000004
+2025-11-18 08:52:56,911 - __main__ - INFO - Added 0x5300000000000000000000000000000000000004 to blacklist: RugCheck: UNKNOWN
+2025-11-18 08:52:57,152 - __main__ - ERROR - Error checking token on RugCheck: 404 Client Error: Not Found for url: https://api.rugcheck.xyz/v1/tokens/ethereum/0xcebA9300f2b948710d2653dD7B07f33A8B32118C
+2025-11-18 08:52:57,300 - __main__ - INFO - Added 0xcebA9300f2b948710d2653dD7B07f33A8B32118C to blacklist: RugCheck: UNKNOWN
+2025-11-18 08:52:57,589 - __main__ - ERROR - Error checking token on RugCheck: 404 Client Error: Not Found for url: https://api.rugcheck.xyz/v1/tokens/ethereum/0xbae207659db88bea0cbead6da0ed00aac12edcdda169e591cd41c94180b46f3b
+2025-11-18 08:52:57,689 - __main__ - INFO - Added 0xbae207659db88bea0cbead6da0ed00aac12edcdda169e591cd41c94180b46f3b to blacklist: RugCheck: UNKNOWN
+2025-11-18 08:52:57,953 - __main__ - ERROR - Error checking token on RugCheck: 404 Client Error: Not Found for url: https://api.rugcheck.xyz/v1/tokens/ethereum/5553444300000000000000000000000000000000.rGm7WCVp9gb4jZHWTEtGUr4dd74z2XuWhE
+2025-11-18 08:52:58,070 - __main__ - INFO - Added 5553444300000000000000000000000000000000.rGm7WCVp9gb4jZHWTEtGUr4dd74z2XuWhE to blacklist: RugCheck: UNKNOWN
+2025-11-18 08:52:58,422 - __main__ - ERROR - Error checking token on RugCheck: 404 Client Error: Not Found for url: https://api.rugcheck.xyz/v1/tokens/ethereum/0x0Dc808adcE2099A9F62AA87D9670745AbA741746
+2025-11-18 08:52:58,548 - __main__ - INFO - Added 0x0Dc808adcE2099A9F62AA87D9670745AbA741746 to blacklist: RugCheck: UNKNOWN
+2025-11-18 08:52:58,916 - __main__ - ERROR - Error checking token on RugCheck: 404 Client Error: Not Found for url: https://api.rugcheck.xyz/v1/tokens/ethereum/ibc/D189335C6E4A68B513C10AB227BF1C1D38C746766278BA3EEB4FB14124F1D858
+2025-11-18 08:52:59,116 - __main__ - INFO - Added ibc/D189335C6E4A68B513C10AB227BF1C1D38C746766278BA3EEB4FB14124F1D858 to blacklist: RugCheck: UNKNOWN
+2025-11-18 08:52:59,440 - __main__ - ERROR - Error checking token on RugCheck: 404 Client Error: Not Found for url: https://api.rugcheck.xyz/v1/tokens/ethereum/usdt.tether-token.near
+2025-11-18 08:52:59,669 - __main__ - INFO - Added usdt.tether-token.near to blacklist: RugCheck: UNKNOWN
+2025-11-18 08:52:59,960 - __main__ - ERROR - Error checking token on RugCheck: 404 Client Error: Not Found for url: https://api.rugcheck.xyz/v1/tokens/ethereum/0x053c91253bc9682c04929ca02ed00b3e423f6710d2ee7e0d5ebb06f3ecf368a8
+2025-11-18 08:53:00,208 - __main__ - INFO - Added 0x053c91253bc9682c04929ca02ed00b3e423f6710d2ee7e0d5ebb06f3ecf368a8 to blacklist: RugCheck: UNKNOWN
+2025-11-18 08:53:00,518 - __main__ - ERROR - Error checking token on RugCheck: 404 Client Error: Not Found for url: https://api.rugcheck.xyz/v1/tokens/ethereum/0x0709F39376dEEe2A2dfC94A58EdEb2Eb9DF012bD
+2025-11-18 08:53:00,669 - __main__ - INFO - Added 0x0709F39376dEEe2A2dfC94A58EdEb2Eb9DF012bD to blacklist: RugCheck: UNKNOWN
+2025-11-18 08:53:00,964 - __main__ - ERROR - Error checking token on RugCheck: 404 Client Error: Not Found for url: https://api.rugcheck.xyz/v1/tokens/ethereum/0x2D270e6886d130D724215A266106e6832161EAEd
+2025-11-18 08:53:01,406 - __main__ - INFO - Added 0x2D270e6886d130D724215A266106e6832161EAEd to blacklist: RugCheck: UNKNOWN
+2025-11-18 08:53:01,800 - __main__ - ERROR - Error checking token on RugCheck: 404 Client Error: Not Found for url: https://api.rugcheck.xyz/v1/tokens/ethereum/0x919C1c267BC06a7039e03fcc2eF738525769109c
+2025-11-18 08:53:02,093 - __main__ - INFO - Added 0x919C1c267BC06a7039e03fcc2eF738525769109c to blacklist: RugCheck: UNKNOWN
+2025-11-18 08:53:02,424 - __main__ - ERROR - Error checking token on RugCheck: 404 Client Error: Not Found for url: https://api.rugcheck.xyz/v1/tokens/ethereum/ibc/4ABBEF4C8926DDDB320AE5188CFD63267ABBCEFC0583E4AE05D6E5AA2401DDAB
+2025-11-18 08:53:02,548 - __main__ - INFO - Added ibc/4ABBEF4C8926DDDB320AE5188CFD63267ABBCEFC0583E4AE05D6E5AA2401DDAB to blacklist: RugCheck: UNKNOWN
+2025-11-18 08:53:02,879 - __main__ - ERROR - Error checking token on RugCheck: 404 Client Error: Not Found for url: https://api.rugcheck.xyz/v1/tokens/ethereum/0x000000000000000000000000000000000006f89a
+2025-11-18 08:53:03,027 - __main__ - INFO - Added 0x000000000000000000000000000000000006f89a to blacklist: RugCheck: UNKNOWN
+2025-11-18 08:53:03,331 - __main__ - ERROR - Error checking token on RugCheck: 404 Client Error: Not Found for url: https://api.rugcheck.xyz/v1/tokens/ethereum/0x6047828dc181963ba44974801FF68e538dA5eaF9
+2025-11-18 08:53:03,447 - __main__ - INFO - Added 0x6047828dc181963ba44974801FF68e538dA5eaF9 to blacklist: RugCheck: UNKNOWN
+2025-11-18 08:53:03,792 - __main__ - ERROR - Error checking token on RugCheck: 404 Client Error: Not Found for url: https://api.rugcheck.xyz/v1/tokens/ethereum/0x0B38e83B86d491735fEaa0a791F65c2B99535396
+2025-11-18 08:53:03,938 - __main__ - INFO - Added 0x0B38e83B86d491735fEaa0a791F65c2B99535396 to blacklist: RugCheck: UNKNOWN
+2025-11-18 08:53:04,261 - __main__ - ERROR - Error checking token on RugCheck: 404 Client Error: Not Found for url: https://api.rugcheck.xyz/v1/tokens/ethereum/factory/osmo1em6xs47hd82806f5cxgyufguxrrc7l0aqx7nzzptjuqgswczk8csavdxek/alloyed/allUSDT
+2025-11-18 08:53:04,390 - __main__ - INFO - Added factory/osmo1em6xs47hd82806f5cxgyufguxrrc7l0aqx7nzzptjuqgswczk8csavdxek/alloyed/allUSDT to blacklist: RugCheck: UNKNOWN
+2025-11-18 08:53:04,687 - __main__ - ERROR - Error checking token on RugCheck: 404 Client Error: Not Found for url: https://api.rugcheck.xyz/v1/tokens/ethereum/0x3A337a6adA9d885b6Ad95ec48F9b75f197b5AE35
+2025-11-18 08:53:04,837 - __main__ - INFO - Added 0x3A337a6adA9d885b6Ad95ec48F9b75f197b5AE35 to blacklist: RugCheck: UNKNOWN
+2025-11-18 08:53:05,286 - __main__ - ERROR - Error checking token on RugCheck: 404 Client Error: Not Found for url: https://api.rugcheck.xyz/v1/tokens/ethereum/0x66e428c3f67a68878562e79A0234c1F83c208770
+2025-11-18 08:53:05,406 - __main__ - INFO - Added 0x66e428c3f67a68878562e79A0234c1F83c208770 to blacklist: RugCheck: UNKNOWN
+2025-11-18 08:53:05,797 - __main__ - ERROR - Error checking token on RugCheck: 404 Client Error: Not Found for url: https://api.rugcheck.xyz/v1/tokens/ethereum/0xdAC17F958D2ee523a2206206994597C13D831ec7
+2025-11-18 08:53:05,946 - __main__ - INFO - Added 0xdAC17F958D2ee523a2206206994597C13D831ec7 to blacklist: RugCheck: UNKNOWN
+2025-11-18 08:53:06,207 - __main__ - ERROR - Error checking token on RugCheck: 404 Client Error: Not Found for url: https://api.rugcheck.xyz/v1/tokens/ethereum/5553445400000000000000000000000000000000.rGbUjUtNVq5M3Un5r4efJqHed4o5P2Usdt
+2025-11-18 08:53:06,303 - __main__ - INFO - Added 5553445400000000000000000000000000000000.rGbUjUtNVq5M3Un5r4efJqHed4o5P2Usdt to blacklist: RugCheck: UNKNOWN
+2025-11-18 08:53:06,615 - __main__ - ERROR - Error checking token on RugCheck: 404 Client Error: Not Found for url: https://api.rugcheck.xyz/v1/tokens/ethereum/0x357b0b74bc833e95a115ad22604854d6b0fca151cecd94111770e5d6ffc9dc2b
+2025-11-18 08:53:06,747 - __main__ - INFO - Added 0x357b0b74bc833e95a115ad22604854d6b0fca151cecd94111770e5d6ffc9dc2b to blacklist: RugCheck: UNKNOWN
+2025-11-18 08:53:07,184 - __main__ - ERROR - Error checking token on RugCheck: 404 Client Error: Not Found for url: https://api.rugcheck.xyz/v1/tokens/ethereum/0xf22bede237a07e121b56d91a491eb7bcdfd1f5907926a9e58338f964a01b17fa::asset::USDC
+2025-11-18 08:53:07,325 - __main__ - INFO - Added 0xf22bede237a07e121b56d91a491eb7bcdfd1f5907926a9e58338f964a01b17fa::asset::USDC to blacklist: RugCheck: UNKNOWN
+2025-11-18 08:53:07,369 - __main__ - INFO - Scan complete: 36 tokens analyzed, 0 signals generated, 100 tokens blacklisted
+2025-11-18 08:53:09,891 - __main__ - ERROR - Error monitoring positions: bybit GET https://api.bybit.com/v5/asset/coin/query-info? 403 Forbidden <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+The Amazon CloudFront distribution is configured to block access from your country.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again later, or contact the app or website owner.
+<BR clear="all">
+If you provide content to customers through CloudFront, you can find steps to troubleshoot and help prevent this error by reviewing the CloudFront documentation.
+<BR clear="all">
+<HR noshade size="1px">
+<PRE>
+Generated by cloudfront (CloudFront)
+Request ID: SSn9ksjyhqq9-uWygNr1tke17NeD4Ekt8GGBB4GZs_p4cCL0poFZkQ==
+</PRE>
+<ADDRESS>
+</ADDRESS>
+</BODY></HTML>
+2025-11-18 08:54:59,726 - __main__ - INFO - Bot stopped by user
+2025-11-18 14:20:12,383 - __main__ - INFO - Database initialized successfully
+2025-11-18 14:20:12,520 - __main__ - INFO - ByBit client initialized successfully
+2025-11-18 14:20:12,522 - __main__ - INFO - Trading bot started
+2025-11-18 14:20:12,529 - __main__ - INFO - Scanning for new tokens and analyzing market...
+2025-11-18 14:20:15,974 - __main__ - INFO - Found 173 unique pairs from DexScreener
+2025-11-18 14:20:15,977 - __main__ - INFO - Analyzing 100 pairs from DexScreener...
+2025-11-18 14:20:16,131 - __main__ - INFO - Scan complete: 0 tokens analyzed, 0 signals generated, 100 tokens blacklisted
+2025-11-18 14:20:17,457 - __main__ - ERROR - Error monitoring positions: bybit GET https://api.bybit.com/v5/asset/coin/query-info? 403 Forbidden <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+The Amazon CloudFront distribution is configured to block access from your country.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again later, or contact the app or website owner.
+<BR clear="all">
+If you provide content to customers through CloudFront, you can find steps to troubleshoot and help prevent this error by reviewing the CloudFront documentation.
+<BR clear="all">
+<HR noshade size="1px">
+<PRE>
+Generated by cloudfront (CloudFront)
+Request ID: mgYxWJSV9X5cWvCtrnGWV8xvR2-Xflq1CVZvHFGvXeb58AtrlR7u1w==
+</PRE>
+<ADDRESS>
+</ADDRESS>
+</BODY></HTML>
+2025-11-18 14:25:17,461 - __main__ - INFO - Scanning for new tokens and analyzing market...
+2025-11-18 14:25:19,127 - __main__ - INFO - Found 173 unique pairs from DexScreener
+2025-11-18 14:25:19,129 - __main__ - INFO - Analyzing 100 pairs from DexScreener...
+2025-11-18 14:25:19,571 - __main__ - INFO - Scan complete: 0 tokens analyzed, 0 signals generated, 100 tokens blacklisted
+2025-11-18 14:25:22,474 - __main__ - ERROR - Error monitoring positions: bybit GET https://api.bybit.com/v5/asset/coin/query-info? 403 Forbidden <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+The Amazon CloudFront distribution is configured to block access from your country.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again later, or contact the app or website owner.
+<BR clear="all">
+If you provide content to customers through CloudFront, you can find steps to troubleshoot and help prevent this error by reviewing the CloudFront documentation.
+<BR clear="all">
+<HR noshade size="1px">
+<PRE>
+Generated by cloudfront (CloudFront)
+Request ID: _k-yCxzLzsOe_sgYUVsj0u9MpsME6AQuLecgvoZ7lXPF9HIOTjHCBQ==
+</PRE>
+<ADDRESS>
+</ADDRESS>
+</BODY></HTML>
+2025-11-18 14:30:22,478 - __main__ - INFO - Scanning for new tokens and analyzing market...
+2025-11-18 14:30:24,841 - __main__ - INFO - Found 173 unique pairs from DexScreener
+2025-11-18 14:30:24,841 - __main__ - INFO - Analyzing 100 pairs from DexScreener...
+2025-11-18 14:30:25,521 - __main__ - INFO - Scan complete: 0 tokens analyzed, 0 signals generated, 100 tokens blacklisted
+2025-11-18 14:30:29,939 - __main__ - ERROR - Error monitoring positions: bybit GET https://api.bybit.com/v5/asset/coin/query-info? 403 Forbidden <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML><HEAD><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ERROR: The request could not be satisfied</TITLE>
+</HEAD><BODY>
+<H1>403 ERROR</H1>
+<H2>The request could not be satisfied.</H2>
+<HR noshade size="1px">
+The Amazon CloudFront distribution is configured to block access from your country.
+We can't connect to the server for this app or website at this time. There might be too much traffic or a configuration error. Try again later, or contact the app or website owner.
+<BR clear="all">
+If you provide content to customers through CloudFront, you can find steps to troubleshoot and help prevent this error by reviewing the CloudFront documentation.
+<BR clear="all">
+<HR noshade size="1px">
+<PRE>
+Generated by cloudfront (CloudFront)
+Request ID: yMfJ78-xB8mVl_Mwj5vk-Rs3lnZuUyGK93-PJ2Eq3cWhp0PbX6pqEg==
+</PRE>
+<ADDRESS>
+</ADDRESS>
+</BODY></HTML>

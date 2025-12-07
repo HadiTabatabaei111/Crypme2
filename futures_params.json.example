@@ -1,0 +1,18 @@
+{
+  "rsi_period": 14,
+  "macd_fast": 12,
+  "macd_slow": 26,
+  "macd_signal": 9,
+  "ma_period": 20,
+  "volume_ma_period": 20,
+  "rsi_weight": 0.25,
+  "macd_weight": 0.25,
+  "price_weight": 0.25,
+  "volume_weight": 0.15,
+  "ma_weight": 0.10,
+  "min_volume_ratio": 1.0,
+  "min_score": 0.0,
+  "min_volume": 1000000,
+  "limit": 50
+}
+

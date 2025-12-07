@@ -1,2 +1,8 @@
-flask==3.0.3
-requests==2.32.3
+requests>=2.31.0
+# Removed python-binance to avoid sanctions and heavy deps; using Bitunix REST
+python-dotenv>=1.0.0
+flask>=3.0.0
+flask-cors>=4.0.0
+numpy>=1.24.0
+ccxt>=4.0.0
+
