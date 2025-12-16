@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بهینه‌سازی سیستم | System Optimization</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/utils.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/optimization.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="{{ url_for('static', filename='js/utils.js') }}"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Header -->
+        <header class="dashboard-header">
+            <div class="header-content">
+                <div class="header-top">
+                    <h1>⚡ بهینه‌سازی سیستم</h1>
+                    <div class="header-actions">
+                        <a href="/" class="btn btn-secondary">بازگشت به داشبورد</a>
+                        <button id="refresh-stats" class="btn btn-primary">🔄 به‌روزرسانی</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Performance Stats -->
+        <section class="stats-section">
+            <h2>📊 آمار عملکرد</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>عملیات‌ها</h3>
+                    <div id="operations-stats" class="stats-content">
+                        <div class="loading">در حال بارگذاری...</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <h3>درخواست‌ها</h3>
+                    <div id="requests-stats" class="stats-content">
+                        <div class="loading">در حال بارگذاری...</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cache Stats -->
+        <section class="cache-section">
+            <div class="section-header">
+                <h2>💾 آمار Cache</h2>
+                <button id="clear-cache" class="btn btn-danger">🗑️ پاک کردن Cache</button>
+            </div>
+            <div class="cache-stats" id="cache-stats">
+                <div class="loading">در حال بارگذاری...</div>
+            </div>
+        </section>
+
+        <!-- Optimization Suggestions -->
+        <section class="suggestions-section">
+            <h2>💡 پیشنهادات بهینه‌سازی</h2>
+            <div class="suggestions-list" id="suggestions-list">
+                <div class="suggestion-item completed">
+                    <div class="suggestion-icon">✅</div>
+                    <div class="suggestion-content">
+                        <h4>سیستم Cache</h4>
+                        <p>سیستم cache برای کاهش درخواست‌های تکراری اضافه شده است</p>
+                    </div>
+                </div>
+                <div class="suggestion-item completed">
+                    <div class="suggestion-icon">✅</div>
+                    <div class="suggestion-content">
+                        <h4>بهینه‌سازی دیتابیس</h4>
+                        <p>ایندکس‌ها برای بهبود سرعت کوئری‌ها ایجاد شده‌اند</p>
+                    </div>
+                </div>
+                <div class="suggestion-item completed">
+                    <div class="suggestion-icon">✅</div>
+                    <div class="suggestion-content">
+                        <h4>مانیتورینگ عملکرد</h4>
+                        <p>سیستم مانیتورینگ برای ردیابی عملکرد اضافه شده است</p>
+                    </div>
+                </div>
+                <div class="suggestion-item completed">
+                    <div class="suggestion-icon">✅</div>
+                    <div class="suggestion-content">
+                        <h4>Rate Limiting</h4>
+                        <p>محدودسازی تعداد درخواست‌ها برای جلوگیری از سوءاستفاده</p>
+                    </div>
+                </div>
+                <div class="suggestion-item completed">
+                    <div class="suggestion-icon">✅</div>
+                    <div class="suggestion-content">
+                        <h4>Input Validation</h4>
+                        <p>اعتبارسنجی و پاکسازی ورودی‌های کاربر</p>
+                    </div>
+                </div>
+                <div class="suggestion-item">
+                    <div class="suggestion-icon">🔄</div>
+                    <div class="suggestion-content">
+                        <h4>WebSocket Support</h4>
+                        <p>پشتیبانی از WebSocket برای به‌روزرسانی‌های لحظه‌ای</p>
+                    </div>
+                </div>
+                <div class="suggestion-item">
+                    <div class="suggestion-icon">🔄</div>
+                    <div class="suggestion-content">
+                        <h4>Connection Pooling</h4>
+                        <p>استفاده از connection pooling برای دیتابیس</p>
+                    </div>
+                </div>
+                <div class="suggestion-item">
+                    <div class="suggestion-icon">🔄</div>
+                    <div class="suggestion-content">
+                        <h4>Redis Cache</h4>
+                        <p>استفاده از Redis برای cache پیشرفته‌تر</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/optimization.js') }}"></script>
+</body>
+</html>
+

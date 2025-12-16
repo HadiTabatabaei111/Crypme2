@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تحلیل فیوچرز | Futures Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/futures.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/utils.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="{{ url_for('static', filename='js/utils.js') }}"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Header -->
+        <header class="dashboard-header">
+            <div class="header-content">
+                <div class="header-top">
+                    <h1>📈 تحلیل فیوچرز - Futures Analysis</h1>
+                    <div class="header-actions">
+                        <a href="/" class="btn btn-secondary">بازگشت به داشبورد</a>
+                        <a href="/about" class="btn btn-secondary">درباره ما</a>
+                        <button id="refresh-btn" class="btn btn-primary">🔄 به‌روزرسانی</button>
+                    </div>
+                </div>
+                <div class="header-info">
+                    <div class="info-item">
+                        <span class="info-label">وضعیت:</span>
+                        <span class="info-value" id="status-indicator">در حال بارگذاری...</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">تعداد ارزها:</span>
+                        <span class="info-value" id="symbols-count">-</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">آخرین به‌روزرسانی:</span>
+                        <span class="info-value" id="last-update">-</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Settings Panel -->
+        <section class="settings-panel" id="settings-panel">
+            <div class="settings-header">
+                <h2>⚙️ تنظیمات پارامترها</h2>
+                <button class="btn-toggle" id="toggle-settings">▼</button>
+            </div>
+            <div class="settings-content" id="settings-content">
+                <form id="params-form" class="params-form">
+                    <div class="form-section">
+                        <h3>اندیکاتور RSI</h3>
+                        <div class="form-group">
+                            <label for="rsi_period">دوره RSI:</label>
+                            <input type="number" id="rsi_period" name="rsi_period" min="1" max="50" value="14">
+                        </div>
+                        <div class="form-group">
+                            <label for="rsi_weight">وزن RSI:</label>
+                            <input type="number" id="rsi_weight" name="rsi_weight" min="0" max="1" step="0.05" value="0.25">
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>اندیکاتور MACD</h3>
+                        <div class="form-group">
+                            <label for="macd_fast">دوره سریع:</label>
+                            <input type="number" id="macd_fast" name="macd_fast" min="1" max="50" value="12">
+                        </div>
+                        <div class="form-group">
+                            <label for="macd_slow">دوره کند:</label>
+                            <input type="number" id="macd_slow" name="macd_slow" min="1" max="100" value="26">
+                        </div>
+                        <div class="form-group">
+                            <label for="macd_signal">دوره سیگنال:</label>
+                            <input type="number" id="macd_signal" name="macd_signal" min="1" max="50" value="9">
+                        </div>
+                        <div class="form-group">
+                            <label for="macd_weight">وزن MACD:</label>
+                            <input type="number" id="macd_weight" name="macd_weight" min="0" max="1" step="0.05" value="0.25">
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>میانگین متحرک (MA)</h3>
+                        <div class="form-group">
+                            <label for="ma_period">دوره MA:</label>
+                            <input type="number" id="ma_period" name="ma_period" min="1" max="200" value="20">
+                        </div>
+                        <div class="form-group">
+                            <label for="ma_weight">وزن MA:</label>
+                            <input type="number" id="ma_weight" name="ma_weight" min="0" max="1" step="0.05" value="0.10">
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>حجم معاملات</h3>
+                        <div class="form-group">
+                            <label for="volume_ma_period">دوره حجم MA:</label>
+                            <input type="number" id="volume_ma_period" name="volume_ma_period" min="1" max="200" value="20">
+                        </div>
+                        <div class="form-group">
+                            <label for="volume_weight">وزن حجم:</label>
+                            <input type="number" id="volume_weight" name="volume_weight" min="0" max="1" step="0.05" value="0.15">
+                        </div>
+                        <div class="form-group">
+                            <label for="min_volume_ratio">حداقل نسبت حجم:</label>
+                            <input type="number" id="min_volume_ratio" name="min_volume_ratio" min="0" max="10" step="0.1" value="1.0">
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>سایر تنظیمات</h3>
+                        <div class="form-group">
+                            <label for="price_weight">وزن تغییر قیمت:</label>
+                            <input type="number" id="price_weight" name="price_weight" min="0" max="1" step="0.05" value="0.25">
+                        </div>
+                        <div class="form-group">
+                            <label for="min_volume">حداقل حجم 24h (USDT):</label>
+                            <input type="number" id="min_volume" name="min_volume" min="0" step="10000" value="1000000">
+                        </div>
+                        <div class="form-group">
+                            <label for="min_score">حداقل امتیاز:</label>
+                            <input type="number" id="min_score" name="min_score" min="-100" max="100" step="1" value="0">
+                        </div>
+                        <div class="form-group">
+                            <label for="limit">تعداد نتایج:</label>
+                            <input type="number" id="limit" name="limit" min="1" max="200" value="50">
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">💾 ذخیره تنظیمات</button>
+                        <button type="button" class="btn btn-secondary" id="reset-params">🔄 بازنشانی</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Filters -->
+        <section class="filters-section">
+            <div class="filters-container">
+                <div class="filter-group">
+                    <label for="timeframe-filter">تایم فریم:</label>
+                    <select id="timeframe-filter" class="filter-select">
+                        <option value="all">همه</option>
+                        <option value="1m">1 دقیقه</option>
+                        <option value="15m">15 دقیقه</option>
+                        <option value="1d">روزانه</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="signal-filter">سیگنال:</label>
+                    <select id="signal-filter" class="filter-select">
+                        <option value="all">همه</option>
+                        <option value="STRONG_BUY">خرید قوی</option>
+                        <option value="BUY">خرید</option>
+                        <option value="NEUTRAL">خنثی</option>
+                        <option value="SELL">فروش</option>
+                        <option value="STRONG_SELL">فروش قوی</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="search-symbol">جستجوی ارز:</label>
+                    <input type="text" id="search-symbol" placeholder="مثال: BTCUSDT" class="filter-input">
+                </div>
+                <button id="apply-filters" class="btn btn-primary">اعمال فیلتر</button>
+            </div>
+        </section>
+
+        <!-- Analysis Results -->
+        <section class="analysis-results">
+            <div class="results-header">
+                <h2>🎯 بهترین ارزها برای فیوچرز</h2>
+                <div class="sort-controls">
+                    <label for="sort-by">مرتب‌سازی بر اساس:</label>
+                    <select id="sort-by" class="filter-select">
+                        <option value="score">امتیاز</option>
+                        <option value="volume">حجم</option>
+                        <option value="price_change">تغییر قیمت</option>
+                    </select>
+                </div>
+            </div>
+            <div id="analysis-table-container" class="table-container">
+                <table class="analysis-table">
+                    <thead>
+                        <tr>
+                            <th>رتبه</th>
+                            <th>نماد</th>
+                            <th>قیمت</th>
+                            <th>امتیاز</th>
+                            <th>RSI</th>
+                            <th>MACD</th>
+                            <th>MA</th>
+                            <th>حجم</th>
+                            <th>تایم فریم‌ها</th>
+                            <th>سیگنال</th>
+                        </tr>
+                    </thead>
+                    <tbody id="analysis-table-body">
+                        <tr>
+                            <td colspan="10" class="loading">در حال بارگذاری...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+
+    <!-- Symbol Detail Modal -->
+    <div id="symbol-modal" class="modal">
+        <div class="modal-content large">
+            <span class="close-modal">&times;</span>
+            <h2 id="modal-symbol-name">جزئیات تحلیل</h2>
+            <div id="modal-content"></div>
+        </div>
+    </div>
+
+    <!-- Trading Modal -->
+    <div id="trading-modal" class="modal">
+        <div class="modal-content trading-modal">
+            <span class="close-modal" id="close-trading-modal">&times;</span>
+            <h2 id="trading-symbol-name">معامله</h2>
+            
+            <div class="trading-container">
+                <!-- Chart Section -->
+                <div class="trading-chart-section">
+                    <h3>📊 چارت قیمت (1 دقیقه)</h3>
+                    <div class="overlay-toggles" style="margin:8px 0; display:flex; gap:12px; align-items:center;">
+                        <label style="display:flex; align-items:center; gap:6px;">
+                            <input type="checkbox" id="toggle-tech" checked>
+                            <span>Technical Ratings</span>
+                        </label>
+                        <label style="display:flex; align-items:center; gap:6px;">
+                            <input type="checkbox" id="toggle-vp" checked>
+                            <span>Volume Profile</span>
+                        </label>
+                        <label style="display:flex; align-items:center; gap:6px;">
+                            <input type="checkbox" id="toggle-ut" checked>
+                            <span>UT Bot Alerts</span>
+                        </label>
+                        <label style="display:flex; align-items:center; gap:6px;">
+                            <input type="checkbox" id="toggle-bs" checked>
+                            <span>Buy/Sell Signals</span>
+                        </label>
+                        <label style="display:flex; align-items:center; gap:6px;">
+                            <input type="checkbox" id="toggle-bb" checked>
+                            <span>Bollinger Bands</span>
+                        </label>
+                        <label style="display:flex; align-items:center; gap:6px;">
+                            <input type="checkbox" id="toggle-ema" checked>
+                            <span>EMA Cross</span>
+                        </label>
+                        <span id="tech-rating-badge" style="margin-right:auto; font-weight:600;"></span>
+                    </div>
+                    <canvas id="trading-chart"></canvas>
+                </div>
+                
+                <!-- Trading Form Section -->
+                <div class="trading-form-section">
+                    <div class="price-info">
+                        <div class="price-item">
+                            <span class="price-label">قیمت فعلی:</span>
+                            <span class="price-value" id="current-price">-</span>
+                        </div>
+                    </div>
+                    
+                    <form id="trading-form" class="trading-form">
+                        <input type="hidden" id="trading-symbol" value="">
+                        <input type="hidden" id="trading-side" value="Buy">
+                        
+                        <div class="form-group">
+                            <label for="entry-percent">درصد نقطه ورود:</label>
+                            <input type="number" id="entry-percent" step="0.01" value="0" min="-10" max="10">
+                            <small>مثبت برای خرید بالاتر از قیمت، منفی برای خرید پایین‌تر</small>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="stop-loss-percent">درصد حد ضرر:</label>
+                            <input type="number" id="stop-loss-percent" step="0.01" value="2" min="0.1" max="20">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="take-profit-percent">درصد حد سود:</label>
+                            <input type="number" id="take-profit-percent" step="0.01" value="4" min="0.1" max="50">
+                        </div>
+                        
+                        <div class="calculated-prices">
+                            <div class="price-box">
+                                <label>نقطه ورود:</label>
+                                <span id="entry-price-display">-</span>
+                                <small id="entry-percent-display"></small>
+                            </div>
+                            <div class="price-box">
+                                <label>حد ضرر:</label>
+                                <span id="stop-loss-display">-</span>
+                                <small id="stop-loss-percent-display"></small>
+                            </div>
+                            <div class="price-box">
+                                <label>حد سود:</label>
+                                <span id="take-profit-display">-</span>
+                                <small id="take-profit-percent-display"></small>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="usd-amount">مبلغ معامله (USDT):</label>
+                            <input type="number" id="usd-amount" step="1" value="100" min="10" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="order-type">نوع معامله:</label>
+                            <select id="order-type">
+                                <option value="Market">Market (سریع)</option>
+                                <option value="Limit">Limit (محدود)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-secondary" id="calculate-btn">محاسبه</button>
+                            <button type="submit" class="btn btn-primary" id="place-order-btn">ارسال به Bitunix</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script src="{{ url_for('static', filename='js/futures.js') }}"></script>
+</body>
+</html>
+

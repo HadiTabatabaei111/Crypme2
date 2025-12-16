@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تنظیمات Bitunix و دیتابیس</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/utils.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header class="dashboard-header">
+            <div class="header-content">
+                <div class="header-top">
+                    <h1>⚙️ تنظیمات Bitunix و دیتابیس</h1>
+                    <div class="header-actions">
+                        <a href="/" class="btn btn-secondary">بازگشت به داشبورد</a>
+                        <a href="/futures" class="btn btn-secondary">تحلیل فیوچرز</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="settings-panel">
+            <div class="settings-header">
+                <h2>کلیدهای Bitunix</h2>
+            </div>
+            <div class="settings-content">
+                <form id="keys-form" class="params-form">
+                    <div class="form-group">
+                        <label for="bitunix_api_key">API Key</label>
+                        <input type="text" id="bitunix_api_key" placeholder="وارد کنید">
+                    </div>
+                    <div class="form-group">
+                        <label for="bitunix_api_secret">Secret Key</label>
+                        <input type="password" id="bitunix_api_secret" placeholder="وارد کنید">
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">ذخیره</button>
+                    </div>
+                </form>
+                <div id="keys-status" class="info-value" style="margin-top:8px;"></div>
+            </div>
+        </section>
+
+        <section class="analysis-results">
+            <div class="results-header">
+                <h2>نمایش جداول دیتابیس</h2>
+                <div class="sort-controls">
+                    <label for="db-tables">انتخاب جدول:</label>
+                    <select id="db-tables" class="filter-select"></select>
+                    <button id="refresh-tables" class="btn btn-secondary">به‌روزرسانی لیست جداول</button>
+                </div>
+            </div>
+            <div id="db-grid" class="table-container">
+                <table class="analysis-table">
+                    <thead>
+                        <tr id="db-grid-head"></tr>
+                    </thead>
+                    <tbody id="db-grid-body">
+                        <tr><td class="loading">جدولی انتخاب نشده</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/settings.js') }}"></script>
+</body>
+</html>

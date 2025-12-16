@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>داشبورد فیوچرز Bitunix</title>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    body{font-family:Vazirmatn,system-ui;background:#0f172a;color:#e2e8f0;margin:0}
+    .container{max-width:1100px;margin:0 auto;padding:20px}
+    h1{font-size:22px;margin:0 0 12px}
+    .controls{display:flex;gap:12px;align-items:center;margin:12px 0}
+    input,select,button{background:#1e293b;color:#e2e8f0;border:1px solid #334155;border-radius:6px;padding:8px}
+    button{cursor:pointer}
+    table{width:100%;border-collapse:collapse;margin-top:16px}
+    th,td{border-bottom:1px solid #334155;padding:8px;text-align:right}
+    th{background:#0b1220}
+    .badge{padding:2px 8px;border-radius:12px;font-size:12px}
+    .pos{background:#064e3b;color:#a7f3d0}
+    .neg{background:#7f1d1d;color:#fecaca}
+  </style>
+  <script>
+    async function loadAnalysis(){
+      const limit = document.getElementById('limit').value
+      const minVol = document.getElementById('minVol').value
+      const tf = document.getElementById('tf').value
+      const qs = new URLSearchParams({ timeframes: tf, min_volume: minVol, limit })
+      const res = await fetch('/api/futures/analyze?'+qs.toString())
+      const data = await res.json()
+      const tbody = document.getElementById('tbody')
+      if (!data.symbols || !data.symbols.length){
+        tbody.innerHTML = '<tr><td colspan="8">داده‌ای یافت نشد</td></tr>'
+        return
+      }
+      tbody.innerHTML = data.symbols.map((s,i)=>{
+        const tfKey = (tf.split(',')[0])
+        const tfData = s.timeframes[tfKey] || Object.values(s.timeframes)[0]
+        const rsi = tfData.rsi.toFixed(2)
+        const macd = tfData.macd.histogram.toFixed(4)
+        const price = tfData.current_price
+        const sig = tfData.signal
+        const change = tfData.price_change
+        const v = s.volume_24h
+        const score = s.avg_score.toFixed(2)
+        const sc = score>10? 'pos' : score<-10? 'neg' : ''
+        return `<tr>
+          <td>${i+1}</td>
+          <td>${s.symbol}</td>
+          <td>$${price.toFixed(6)}</td>
+          <td><span class="badge ${sc}">${score}</span></td>
+          <td>${rsi}</td>
+          <td>${macd}</td>
+          <td>$${formatNumber(v)}</td>
+          <td>${sig}</td>
+        </tr>`
+      }).join('')
+    }
+    function formatNumber(n){
+      if(n>=1e9)return (n/1e9).toFixed(2)+'B'
+      if(n>=1e6)return (n/1e6).toFixed(2)+'M'
+      if(n>=1e3)return (n/1e3).toFixed(2)+'K'
+      return Number(n).toFixed(2)
+    }
+    async function syncTickers(){
+      await fetch('/api/futures/sync', { method:'POST' })
+      await loadAnalysis()
+    }
+    document.addEventListener('DOMContentLoaded', ()=>{
+      loadAnalysis()
+      setInterval(()=>loadAnalysis(),60000)
+    })
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>📈 داشبورد فیوچرز Bitunix</h1>
+    <div class="controls">
+      <label>تایم‌فریم‌ها</label>
+      <select id="tf">
+        <option value="15m,1m,1d">15m,1m,1d</option>
+        <option value="1m">1m</option>
+        <option value="15m">15m</option>
+        <option value="1d">1d</option>
+      </select>
+      <label>حداقل حجم 24h</label>
+      <input id="minVol" type="number" value="1000000">
+      <label>تعداد نتایج</label>
+      <input id="limit" type="number" value="50">
+      <button onclick="loadAnalysis()">بارگذاری</button>
+      <button onclick="syncTickers()">همگام‌سازی</button>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>رتبه</th>
+          <th>نماد</th>
+          <th>قیمت</th>
+          <th>امتیاز</th>
+          <th>RSI</th>
+          <th>MACD</th>
+          <th>حجم</th>
+          <th>سیگنال</th>
+        </tr>
+      </thead>
+      <tbody id="tbody"><tr><td colspan="8">در حال بارگذاری...</td></tr></tbody>
+    </table>
+  </div>
+</body>
+</html>

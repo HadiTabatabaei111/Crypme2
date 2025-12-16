@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>داشبورد ترید کریپتو | Crypto Trading Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/utils.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script src="{{ url_for('static', filename='js/utils.js') }}"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Header -->
+        <header class="dashboard-header">
+            <div class="header-content">
+                <div class="header-top">
+                    <h1>💰 داشبورد ترید کریپتو</h1>
+                    <div class="header-actions">
+                        <a href="/futures" class="btn btn-primary">📈 تحلیل فیوچرز</a>
+                        <a href="/optimization" class="btn btn-secondary">⚡ بهینه‌سازی</a>
+                        <a href="/about" class="btn btn-secondary">درباره ما</a>
+                    </div>
+                </div>
+                <div class="header-stats">
+                    <div class="stat-item">
+                        <span class="stat-label">کل ارزها</span>
+                        <span class="stat-value" id="stat-total-tokens">-</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">ارزهای پامپ</span>
+                        <span class="stat-value pump" id="stat-pumped">-</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">ارزهای دامپ</span>
+                        <span class="stat-value dump" id="stat-dumped">-</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">کل سیگنال‌ها</span>
+                        <span class="stat-value" id="stat-signals">-</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            <!-- Filters Section -->
+            <section class="filters-section">
+                <div class="filters-container">
+                    <div class="filter-group">
+                        <label for="search-input">جستجو:</label>
+                        <input type="text" id="search-input" placeholder="جستجوی ارز (نماد یا نام)" class="filter-input">
+                    </div>
+                    <div class="filter-group">
+                        <label for="sort-select">مرتب‌سازی:</label>
+                        <select id="sort-select" class="filter-select">
+                            <option value="none">بدون مرتب‌سازی</option>
+                            <option value="price_desc">قیمت نزولی</option>
+                            <option value="price_asc">قیمت صعودی</option>
+                            <option value="change_desc">تغییر 24h نزولی</option>
+                            <option value="change_asc">تغییر 24h صعودی</option>
+                            <option value="volume_desc">حجم 24h نزولی</option>
+                            <option value="volume_asc">حجم 24h صعودی</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="filter-type">فیلتر:</label>
+                        <select id="filter-type" class="filter-select">
+                            <option value="">همه</option>
+                            <option value="pump">پامپ (>15%)</option>
+                            <option value="dump">دامپ (<-15%)</option>
+                            <option value="pumped">پامپ شدید (>20%)</option>
+                            <option value="dumped">دامپ شدید (<-20%)</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="min-price-change">تغییر قیمت (حداقل):</label>
+                        <input type="number" id="min-price-change" placeholder="%" class="filter-input" step="0.1">
+                    </div>
+                    <div class="filter-group">
+                        <label for="max-price-change">تغییر قیمت (حداکثر):</label>
+                        <input type="number" id="max-price-change" placeholder="%" class="filter-input" step="0.1">
+                    </div>
+                    <div class="filter-group">
+                        <label>بازه قیمت (USD):</label>
+                        <div style="display:flex; gap:8px; align-items:center;">
+                            <input type="number" id="min-price" class="filter-input" placeholder="حداقل" step="0.01">
+                            <span style="color:var(--text-secondary)">تا</span>
+                            <input type="number" id="max-price" class="filter-input" placeholder="حداکثر" step="0.01">
+                        </div>
+                    </div>
+                    <div class="filter-group">
+                        <label>بازه حجم 24h (USD):</label>
+                        <div style="display:flex; gap:8px; align-items:center;">
+                            <input type="number" id="min-volume" class="filter-input" placeholder="حداقل" step="1000">
+                            <span style="color:var(--text-secondary)">تا</span>
+                            <input type="number" id="max-volume" class="filter-input" placeholder="حداکثر" step="1000">
+                        </div>
+                    </div>
+                    <button id="apply-filters" class="btn btn-primary">اعمال فیلتر</button>
+                    <button id="reset-filters" class="btn btn-secondary">بازنشانی</button>
+                </div>
+            </section>
+
+            <!-- Charts Section -->
+            <section class="charts-section">
+                <div class="chart-container">
+                    <div class="chart-card">
+                        <h3>نمودار تغییرات قیمت (24 ساعت)</h3>
+                        <canvas id="price-chart"></canvas>
+                    </div>
+                    <div class="chart-card">
+                        <h3>توزیع تغییرات قیمت</h3>
+                        <canvas id="distribution-chart"></canvas>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Pumped & Dumped Tokens -->
+            <section class="alerts-section">
+                <div class="alerts-container">
+                    <div class="alert-card pump-alerts">
+                        <h3>🔥 ارزهای پامپ</h3>
+                        <div id="pumped-tokens-list" class="tokens-list"></div>
+                    </div>
+                    <div class="alert-card dump-alerts">
+                        <h3>📉 ارزهای دامپ</h3>
+                        <div id="dumped-tokens-list" class="tokens-list"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tokens Table -->
+            <section class="tokens-section">
+                <div class="tokens-header">
+                    <h2>لیست ارزها</h2>
+                    <div class="pagination-info">
+                        <span id="pagination-info">نمایش 0-0 از 0</span>
+                    </div>
+                </div>
+                <div class="tokens-table-container">
+                    <table class="tokens-table">
+                        <thead>
+                            <tr>
+                                <th data-sort="symbol" class="sortable">نماد</th>
+                                <th data-sort="name" class="sortable">نام</th>
+                                <th data-sort="price" class="sortable">قیمت (USD)</th>
+                                <th data-sort="change" class="sortable">تغییر 24h</th>
+                                <th data-sort="volume" class="sortable">حجم 24h</th>
+                                <th data-sort="liquidity" class="sortable">نقدینگی</th>
+                                <th>نوع</th>
+                                <th>عملیات</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tokens-table-body">
+                            <tr>
+                                <td colspan="8" class="loading">در حال بارگذاری...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="pagination">
+                    <button id="prev-page" class="btn btn-secondary" disabled>قبلی</button>
+                    <span id="page-info">صفحه 1</span>
+                    <button id="next-page" class="btn btn-secondary">بعدی</button>
+                </div>
+                <div style="margin-top:8px;display:flex;gap:8px;align-items:center;">
+                    <button id="btn-sync-coingecko" class="btn btn-secondary">همگام‌سازی CoinGecko</button>
+                    <small id="sync-status" style="color:var(--text-secondary)"></small>
+                </div>
+            </section>
+        </main>
+
+        <!-- Chart Modal -->
+        <div id="chart-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2 id="modal-token-name">نمودار قیمت</h2>
+                <canvas id="token-chart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+</body>
+</html>
+

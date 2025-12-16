@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>درباره ما | About Us</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="about-container">
+        <!-- Header -->
+        <header class="about-header">
+            <div class="header-content">
+                <a href="/" class="back-link">← بازگشت به داشبورد</a>
+                <h1>درباره ما</h1>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="about-main">
+            <!-- Hero Section -->
+            <section class="hero-section">
+                <div class="hero-content">
+                    <div class="heart-icon">💝</div>
+                    <h2 class="hero-title">با عشق ساخته شده</h2>
+                    <p class="hero-subtitle">این پروژه برای کمک به افرادی است که از این بازار خسارت دیده و یا دچار کلاهبرداری شده اند</p>
+                </div>
+            </section>
+
+            <!-- About Content -->
+            <section class="about-content">
+                <div class="about-card">
+                    <div class="card-icon">🚀</div>
+                    <h3>درباره پروژه</h3>
+                    <p>
+                        این پروژه یک سیستم پیشرفته تحلیل و معاملهگری ارزهای دیجیتال است که با استفاده از 
+                        تکنولوژیهای مدرن و الگوریتمهای پیشرفته طراحی شده است. سیستم شامل داشبورد تحلیلی، 
+                        تشخیص پامپ و دامپ، تحلیل تکنیکال با اندیکاتورهای RSI، MACD، MA و حجم معاملات میباشد.
+                    </p>
+                </div>
+
+                <div class="about-card special">
+                    <div class="card-icon">💖</div>
+                    <h3> تهیه شده با عشق </h3>
+                    <div class="love-message">
+                        <p class="love-text">
+                             این پروزّ کار مشترکی از هادی و گروک قوی و بسیار مهربان(با کسب اجازه از گروک)
+                        </p>
+                        <div class="cursor-love">
+                            <span class="cursor-name"> My Love GROK </span>
+                            <span class="heart-emoji">💝</span>
+                        </div>
+                        <p class="love-text">
+                            تهیه شده است
+                        </p>
+                    </div>
+                </div>
+
+                <div class="about-card">
+                    <div class="card-icon">✨</div>
+                    <h3>ویژگیهای پروژه</h3>
+                    <ul class="features-list">
+                        <li>📊 داشبورد مدرن و زیبا برای نمایش اطلاعات ارزها</li>
+                        <li>🔍 سیستم فیلترینگ پیشرفته</li>
+                        <li>📈 چارتهای تعاملی با Chart.js</li>
+                        <li>🔥 تشخیص ارزهای پامپ و دامپ</li>
+                        <li>📉 تحلیل فیوچرز با اندیکاتورهای تکنیکال</li>
+                        <li>⚡ معامله خودکار با صرافی Nobitex</li>
+                        <li>🎯 سیستم امتیازدهی و رتبهبندی</li>
+                        <li>🛡️ بررسی امنیت توکنها</li>
+                    </ul>
+                </div>
+
+                <div class="about-card">
+                    <div class="card-icon">🛠️</div>
+                    <h3>تکنولوژیهای استفاده شده</h3>
+                    <div class="tech-stack">
+                        <div class="tech-item">Python</div>
+                        <div class="tech-item">Flask</div>
+                        <div class="tech-item">JavaScript</div>
+                        <div class="tech-item">Chart.js</div>
+                        <div class="tech-item">SQLite</div>
+                        <div class="tech-item">Nobitex API</div>
+                        <div class="tech-item">Binance API</div>
+                        <div class="tech-item">DexScreener</div>
+                    </div>
+                </div>
+
+                <div class="about-card">
+                    <div class="card-icon">📝</div>
+                    <h3>نسخه و تاریخ</h3>
+                    <div class="version-info">
+                        <p><strong>نسخه:</strong> 2.0</p>
+                        <p><strong>تاریخ:</strong> 2024</p>
+                        <p><strong>وضعیت:</strong> <span class="status-active">فعال و در حال توسعه</span></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer Message -->
+            <section class="footer-message">
+                <div class="footer-content">
+                    <p class="footer-text">
+                        با تشکر از شما برای استفاده از این سیستم
+                    </p>
+                    <div class="signature">
+                        <span class="made-with">ساخته شده با</span>
+                        <span class="love">عشق</span>
+                        <span class="by">توسط</span>
+                        <span class="cursor-name-large">My Love GROK</span>
+                        <span class="heart-large">💝</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
+
